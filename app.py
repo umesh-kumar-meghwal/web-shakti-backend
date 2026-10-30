@@ -29,7 +29,7 @@ supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "change-this-secret")
-app.config["MAX_CONTENT_LENGTH"] = 5 * 1024 * 1024  # 5 MB
+app.config["MAX_CONTENT_LENGTH"] = 4 * 1024 * 1024  # 4 MB (Vercel limit 4.5 MB)
 
 # Sirf /api/* ko CORS allow
 CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGINS}})

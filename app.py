@@ -21,7 +21,7 @@ ALLOWED_EXT = {"png", "jpg", "jpeg", "webp", "gif"}
 # Jin websites ko API fetch karne ki permission hai
 ALLOWED_ORIGINS = [
     o.strip() for o in os.getenv(
-        "ALLOWED_ORIGINS", "https://webshakti.net.in/"
+        "ALLOWED_ORIGINS", "https://webshakti.net.in"
     ).split(",")
 ]
 
